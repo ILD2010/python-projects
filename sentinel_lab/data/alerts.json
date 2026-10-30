@@ -1,0 +1,760 @@
+[
+  {
+    "request": {
+      "source_ip": "203.0.113.99",
+      "method": "GET",
+      "path": "/search?q=%27+OR+1%3D1--",
+      "status_code": 403,
+      "user_agent": "Mozilla/5.0 Chrome/140.0",
+      "response_bytes": 2755,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Injection pattern",
+        "description": "Input resembles a SQL or browser-script injection attempt.",
+        "score": 45,
+        "evidence": "Decoded URL contains \"' or \"",
+        "recommendation": "Validate input, use parameterized queries, and encode output."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 70,
+    "severity": "CRITICAL",
+    "id": "B99826D0",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "192.0.2.66",
+      "method": "GET",
+      "path": "/profile?name=%3Cscript%3Etraining%3C/script%3E",
+      "status_code": 403,
+      "user_agent": "Mozilla/5.0 Chrome/140.0",
+      "response_bytes": 735,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Injection pattern",
+        "description": "Input resembles a SQL or browser-script injection attempt.",
+        "score": 45,
+        "evidence": "Decoded URL contains '<script'",
+        "recommendation": "Validate input, use parameterized queries, and encode output."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 55,
+    "severity": "HIGH",
+    "id": "F0DA2443",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.99",
+      "method": "GET",
+      "path": "/admin",
+      "status_code": 404,
+      "user_agent": "python-requests/2.x",
+      "response_bytes": 1249,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /admin",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: python-requests/2.x",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 55,
+    "severity": "HIGH",
+    "id": "25C5AB41",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.99",
+      "method": "GET",
+      "path": "/admin",
+      "status_code": 404,
+      "user_agent": "python-requests/2.x",
+      "response_bytes": 8123,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /admin",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: python-requests/2.x",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 55,
+    "severity": "HIGH",
+    "id": "EEE36C62",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.99",
+      "method": "GET",
+      "path": "/wp-login.php",
+      "status_code": 404,
+      "user_agent": "curl/8.0",
+      "response_bytes": 3152,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /wp-login.php",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: curl/8.0",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 55,
+    "severity": "HIGH",
+    "id": "A9F51155",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.13",
+      "method": "GET",
+      "path": "/search?q=%27+OR+1%3D1--",
+      "status_code": 403,
+      "user_agent": "Mozilla/5.0 Chrome/140.0",
+      "response_bytes": 2072,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Injection pattern",
+        "description": "Input resembles a SQL or browser-script injection attempt.",
+        "score": 45,
+        "evidence": "Decoded URL contains \"' or \"",
+        "recommendation": "Validate input, use parameterized queries, and encode output."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 55,
+    "severity": "HIGH",
+    "id": "7502494C",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.99",
+      "method": "GET",
+      "path": "/.env",
+      "status_code": 404,
+      "user_agent": "curl/8.0",
+      "response_bytes": 8337,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /.env",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: curl/8.0",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 55,
+    "severity": "HIGH",
+    "id": "90CA0E2A",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "192.0.2.66",
+      "method": "GET",
+      "path": "/product?id=1+UNION+SELECT+demo",
+      "status_code": 403,
+      "user_agent": "SentinelMobile/2.1",
+      "response_bytes": 3132,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Injection pattern",
+        "description": "Input resembles a SQL or browser-script injection attempt.",
+        "score": 45,
+        "evidence": "Decoded URL contains 'union select'",
+        "recommendation": "Validate input, use parameterized queries, and encode output."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 55,
+    "severity": "HIGH",
+    "id": "D41FAD3F",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "198.51.100.66",
+      "method": "GET",
+      "path": "/static/%2e%2e/%2e%2e/training.txt",
+      "status_code": 403,
+      "user_agent": "SentinelMobile/2.1",
+      "response_bytes": 3683,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Path traversal pattern",
+        "description": "The path attempts to move outside the intended directory.",
+        "score": 40,
+        "evidence": "Suspicious path: /static/%2e%2e/%2e%2e/training.txt",
+        "recommendation": "Resolve paths safely and enforce an allowed base directory."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 50,
+    "severity": "HIGH",
+    "id": "456E25C0",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "192.0.2.99",
+      "method": "GET",
+      "path": "/static/%2e%2e/%2e%2e/training.txt",
+      "status_code": 403,
+      "user_agent": "Mozilla/5.0 Chrome/140.0",
+      "response_bytes": 4831,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Path traversal pattern",
+        "description": "The path attempts to move outside the intended directory.",
+        "score": 40,
+        "evidence": "Suspicious path: /static/%2e%2e/%2e%2e/training.txt",
+        "recommendation": "Resolve paths safely and enforce an allowed base directory."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 50,
+    "severity": "HIGH",
+    "id": "1D224CDA",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.200",
+      "method": "GET",
+      "path": "/static/%2e%2e/%2e%2e/training.txt",
+      "status_code": 403,
+      "user_agent": "SentinelMobile/2.1",
+      "response_bytes": 3507,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Path traversal pattern",
+        "description": "The path attempts to move outside the intended directory.",
+        "score": 40,
+        "evidence": "Suspicious path: /static/%2e%2e/%2e%2e/training.txt",
+        "recommendation": "Resolve paths safely and enforce an allowed base directory."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 50,
+    "severity": "HIGH",
+    "id": "3AD25758",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "192.0.2.200",
+      "method": "GET",
+      "path": "/download?file=../../demo/config.txt",
+      "status_code": 403,
+      "user_agent": "Mozilla/5.0 Firefox/143.0",
+      "response_bytes": 6051,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Path traversal pattern",
+        "description": "The path attempts to move outside the intended directory.",
+        "score": 40,
+        "evidence": "Suspicious path: /download?file=../../demo/config.txt",
+        "recommendation": "Resolve paths safely and enforce an allowed base directory."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 50,
+    "severity": "HIGH",
+    "id": "895ED6E7",
+    "status": "False Positive",
+    "analyst_note": "Not woth investigating"
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.13",
+      "method": "GET",
+      "path": "/download?file=../../demo/config.txt",
+      "status_code": 403,
+      "user_agent": "Mozilla/5.0 Firefox/143.0",
+      "response_bytes": 7546,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Path traversal pattern",
+        "description": "The path attempts to move outside the intended directory.",
+        "score": 40,
+        "evidence": "Suspicious path: /download?file=../../demo/config.txt",
+        "recommendation": "Resolve paths safely and enforce an allowed base directory."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 50,
+    "severity": "HIGH",
+    "id": "A15C0AF1",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "198.51.100.13",
+      "method": "GET",
+      "path": "/download?file=../../demo/config.txt",
+      "status_code": 403,
+      "user_agent": "SentinelMobile/2.1",
+      "response_bytes": 4651,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Path traversal pattern",
+        "description": "The path attempts to move outside the intended directory.",
+        "score": 40,
+        "evidence": "Suspicious path: /download?file=../../demo/config.txt",
+        "recommendation": "Resolve paths safely and enforce an allowed base directory."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 50,
+    "severity": "HIGH",
+    "id": "075E2D2F",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "192.0.2.13",
+      "method": "GET",
+      "path": "/static/%2e%2e/%2e%2e/training.txt",
+      "status_code": 403,
+      "user_agent": "Mozilla/5.0 Chrome/140.0",
+      "response_bytes": 1286,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Path traversal pattern",
+        "description": "The path attempts to move outside the intended directory.",
+        "score": 40,
+        "evidence": "Suspicious path: /static/%2e%2e/%2e%2e/training.txt",
+        "recommendation": "Resolve paths safely and enforce an allowed base directory."
+      },
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 403",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 50,
+    "severity": "HIGH",
+    "id": "F4EBDFA3",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.13",
+      "method": "GET",
+      "path": "/wp-login.php",
+      "status_code": 404,
+      "user_agent": "python-requests/2.x",
+      "response_bytes": 822,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /wp-login.php",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: python-requests/2.x",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 40,
+    "severity": "MEDIUM",
+    "id": "4D31AE8F",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.200",
+      "method": "GET",
+      "path": "/wp-login.php",
+      "status_code": 404,
+      "user_agent": "curl/8.0",
+      "response_bytes": 1017,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /wp-login.php",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: curl/8.0",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 40,
+    "severity": "MEDIUM",
+    "id": "CCAA6DE1",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "192.0.2.13",
+      "method": "GET",
+      "path": "/wp-login.php",
+      "status_code": 404,
+      "user_agent": "python-requests/2.x",
+      "response_bytes": 2902,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /wp-login.php",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: python-requests/2.x",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 40,
+    "severity": "MEDIUM",
+    "id": "CC8CB150",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.66",
+      "method": "GET",
+      "path": "/.env",
+      "status_code": 404,
+      "user_agent": "curl/8.0",
+      "response_bytes": 5370,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Sensitive resource probe",
+        "description": "A commonly exposed administrative or secret file was requested.",
+        "score": 28,
+        "evidence": "Requested known probe target /.env",
+        "recommendation": "Remove unused files and restrict administrative routes."
+      },
+      {
+        "rule_name": "Automated client",
+        "description": "The client identifies itself as an automation tool.",
+        "score": 12,
+        "evidence": "User-Agent: curl/8.0",
+        "recommendation": "Correlate with request rate before blocking automation."
+      }
+    ],
+    "score": 40,
+    "severity": "MEDIUM",
+    "id": "30EA9217",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.99",
+      "method": "POST",
+      "path": "/login",
+      "status_code": 401,
+      "user_agent": "Mozilla/5.0 Firefox/143.0",
+      "response_bytes": 250,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 401",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 25,
+    "severity": "LOW",
+    "id": "8E767B81",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "203.0.113.99",
+      "method": "POST",
+      "path": "/login",
+      "status_code": 401,
+      "user_agent": "Mozilla/5.0 Firefox/143.0",
+      "response_bytes": 250,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 401",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 25,
+    "severity": "LOW",
+    "id": "964264A5",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "192.0.2.13",
+      "method": "POST",
+      "path": "/login",
+      "status_code": 401,
+      "user_agent": "Mozilla/5.0 Chrome/140.0",
+      "response_bytes": 250,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 401",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 10,
+    "severity": "INFO",
+    "id": "8E2A7AA7",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "198.51.100.99",
+      "method": "POST",
+      "path": "/login",
+      "status_code": 401,
+      "user_agent": "Mozilla/5.0 Chrome/140.0",
+      "response_bytes": 250,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 401",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 10,
+    "severity": "INFO",
+    "id": "C5A7CAF5",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "198.51.100.99",
+      "method": "POST",
+      "path": "/login",
+      "status_code": 401,
+      "user_agent": "SentinelMobile/2.1",
+      "response_bytes": 250,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 401",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 10,
+    "severity": "INFO",
+    "id": "44661482",
+    "status": "New",
+    "analyst_note": ""
+  },
+  {
+    "request": {
+      "source_ip": "198.51.100.13",
+      "method": "POST",
+      "path": "/login",
+      "status_code": 401,
+      "user_agent": "Mozilla/5.0 Firefox/143.0",
+      "response_bytes": 250,
+      "timestamp": "2026-10-30T04:55:36+00:00"
+    },
+    "findings": [
+      {
+        "rule_name": "Access rejected",
+        "description": "The server rejected authentication or authorization.",
+        "score": 10,
+        "evidence": "HTTP status 401",
+        "recommendation": "Check for repeated failures from the same source."
+      }
+    ],
+    "score": 10,
+    "severity": "INFO",
+    "id": "38ED3E62",
+    "status": "New",
+    "analyst_note": ""
+  }
+]
