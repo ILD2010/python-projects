@@ -5,7 +5,7 @@ Sentinel Lab is a **terminal-based Security Operations Center (SOC) simulator** 
 
 I created this project to explore **SOC operations, detection engineering, Python development, and terminal-based user interface design**.
 
-## 🚀 Features
+##  Features
 
 - **Traffic Simulation** — Generate fictional normal and suspicious web requests.
 - **Threat Detection** — Identify SQL injection, directory traversal, scanner activity, and other suspicious patterns.
@@ -15,7 +15,7 @@ I created this project to explore **SOC operations, detection engineering, Pytho
 - **JSON Storage** — Save and manage alert information.
 - **Modular Design** — Multiple Python modules working together as one application.
 
-## 💻 Installation & Usage
+##  Installation & Usage
 
 **Requirements:** Python 3.11+ recommended.
 
@@ -24,7 +24,7 @@ I created this project to explore **SOC operations, detection engineering, Pytho
 Click **Code → Download ZIP** on GitHub and extract the folder, or clone it:
 
 ```bash
-git clone <YOUR-REPOSITORY-URL>
+git clone https://github.com/ILD2010/python-projects/blob/main/sentinel_lab
 ```
 
 **2. Open the project**
@@ -45,7 +45,7 @@ No Docker container or virtual environment is required.
 
 If your installation requires additional Python packages, install the dependencies listed in `requirements.txt`.
 
-## 🎮 How It Works
+##  How It Works
 
 Once launched, Sentinel Lab provides an interactive menu:
 
@@ -59,7 +59,7 @@ Once launched, Sentinel Lab provides an interactive menu:
 
 Follow the on-screen prompts to interact with the simulator.
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 Sentinel-Lab/
@@ -75,7 +75,7 @@ Sentinel-Lab/
 └── README.md
 ```
 
-## 🧪 Testing
+##  Testing
 
 Run the automated tests with:
 
@@ -83,7 +83,7 @@ Run the automated tests with:
 python3 -m unittest discover -s tests -v
 ```
 
-## 🎯 Project Purpose
+##  Project Purpose
 
 Sentinel Lab was built as a personal cybersecurity and Python development project to gain hands-on experience with:
 
@@ -94,7 +94,7 @@ Sentinel Lab was built as a personal cybersecurity and Python development projec
 - Interactive terminal interfaces
 - JSON data management and automated testing
 
-## 🔐 Disclaimer
+##  Disclaimer
 
 Sentinel Lab is an **educational, defensive security simulator**. All traffic and IP addresses are fictional and generated locally.
 
