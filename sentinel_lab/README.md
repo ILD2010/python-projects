@@ -100,6 +100,6 @@ Sentinel Lab is an **educational, defensive security simulator**. All traffic an
 
 It does not scan real networks, send attack requests, or interact with external systems.
 
-## 📜 License
+##  License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
